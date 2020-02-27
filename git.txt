@@ -1,0 +1,47 @@
+须知： 
+1、协同进行开发时，在提交代码时需要通知其他同事，避免造成代码提交记录错乱。 
+2、代码开发前先git pull origin 获取branch下最新数据。 
+3、私人仓库禁止git push至生产仓库分支。 
+4、代码开发后git至分支下，评审后修改和开发记录信息，都要通过commit提交，附上修改信息内容。
+
+基本操作
+ 配置用户和邮箱
+git config --global uer.name "xxxxxxx" 
+git config --global uer.email “xxxx@email.com”
+
+添加运程库
+本地机器上生成ssh key
+ssh-keygen -t rsa -C "youremail@example.com"
+cat ~/.ssh/id_rsa.pub 
+
+将公钥信息复制下来，保存到登陆你的github帐户。点击你的头像，然后  Settings -> 左栏点击 SSH and GPG keys -> 点击 New SSH key 
+
+完成以后，验证下这个key是不是正常工作： 
+
+$ ssh -T git@github.com
+Attempts to ssh to github
+如果，看到： 
+
+Hi xxx! You've successfully authenticated, but GitHub does not # provide shell access.
+恭喜你，你的设置已经成功了。
+
+此刻建立起服务器和github通信，下面就要进行远程连接仓库
+mkdir test
+初始化
+git init
+可以尝试新建一个testfile echo “123” > testfile
+新增文件
+git add testfile
+提交文件修改信息
+git commit -m "新建测试文件，此信息是备注信息"
+建立远程库连接操作
+git remote add origin git@github.com-xxxxxxx  /git@这些是从git上复制ssh远程连接地址信息
+查看远程库连接情况
+git remote -v
+将testfile文件推送到git仓库
+git push origin master /master是仓库主分支，如果此仓库还有其他分支，可以推送到其他分支名下
+
+如果是不推送文件到远程仓库，第一次操作想从远程仓库获取资料，可以使用pull拉取仓库
+git pull origin master
+
+其他操作后续补充上
