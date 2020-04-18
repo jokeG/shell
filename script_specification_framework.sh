@@ -72,6 +72,7 @@ logfile="/tmp/_auto_pressure_jedis.log"
 variable=""
 log "################################## Start ########################################"
 # start main function
+main
 if [ $? -ne 0 ];then
 	log "---ERROR--- Circular execution exception, please check and try again!"
 	quit 6
