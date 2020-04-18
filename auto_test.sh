@@ -7,7 +7,7 @@
 #Date: 2020/04/14
 # History:
 #   <version>    <time>    <author>        <desc>
-#    1.0.0       20/04/14   shaoshuai     	定时获取进程内存,YGC,FGC,并自动生成测试数据
+#    1.0.0       20/04/14   shaoshuai     Get process memory, YGC, FGC, and generate test data automatically
 ###################################################################
 #return code
 # 0 : ok
