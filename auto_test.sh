@@ -1,4 +1,6 @@
-on:1.0.0
+#!/bin/bash
+
+# Version:1.0.0
 # Function: Get the boot process memory consumption based on five boot jar tests
 # Use: the script is used mode Script execution locally ,opt as follow:
 #       sh time_get_mem.sh
