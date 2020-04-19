@@ -2,13 +2,12 @@
 
 if [ ${UID} == 0 ]; then
     confirm=0
-    read -p " Alic，您确定要安装Apache+MySQL+Php环境？确认请输入1否则退出： " confirm
-    if [ ! $confirm -eq 1 ]
-    then
-    echo " 伙计，我们已经退出安装此环境啦～～"
-    exit 0
+    read -p " 您确定要安装Apache+MySQL+Php环境？确认请输入1否则退出： " confirm
+    if [ ! $confirm -eq 1 ]; then
+        echo " 伙计，我们已经退出安装此环境啦～～"
+        exit 0
     else
-    echo " 主人，我在超常发挥为您搭建环境呢，请稍等～～"
+        echo " 主人，我在超常发挥为您搭建环境呢，请稍等～～"
     fi
 
     #安装mysql
